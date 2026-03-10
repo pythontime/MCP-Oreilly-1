@@ -1,0 +1,465 @@
+# Instincts generated from https://github.com/pythontime/MCP-Oreilly-1
+# Generated: 2026-03-10T16:05:55.880Z
+# Version: 2.0
+
+---
+id: MCP-Oreilly-1-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 32 chars
+- Based on 25 commits
+
+---
+id: MCP-Oreilly-1-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: MCP-Oreilly-1-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: MCP-Oreilly-1-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: MCP-Oreilly-1-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: MCP-Oreilly-1-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: node/src/*, node/sysinfo/src/*
+
+---
+id: MCP-Oreilly-1-workflow-create-new-language-implementation
+trigger: "when doing create new language implementation"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Workflow Create New Language Implementation
+
+## Action
+
+Follow the create-new-language-implementation workflow:
+1. Upload core implementation files (main server file, package config)
+2. Rename/move files to organize by language directory
+3. Add language-specific configuration files (tsconfig.json, pom.xml, pyproject.toml)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: */package.json, */src/index.ts, */pom.xml
+
+---
+id: MCP-Oreilly-1-workflow-file-upload-then-reorganize
+trigger: "when doing file upload then reorganize"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Workflow File Upload Then Reorganize
+
+## Action
+
+Follow the file-upload-then-reorganize workflow:
+1. Upload files via bulk upload to root directory
+2. Rename/move files to appropriate subdirectories
+3. Organize by language or feature type
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: root level files, organized subdirectory structure
+
+---
+id: MCP-Oreilly-1-workflow-documentation-iteration
+trigger: "when doing documentation iteration"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Workflow Documentation Iteration
+
+## Action
+
+Follow the documentation-iteration workflow:
+1. Create initial README.md
+2. Make multiple sequential updates to refine content
+3. Continue iterating until documentation is complete
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: README.md
+
+---
+id: MCP-Oreilly-1-workflow-create-new-mcp-tool
+trigger: "when doing create new mcp tool"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/pythontime/MCP-Oreilly-1
+---
+
+# MCP Oreilly 1 Workflow Create New Mcp Tool
+
+## Action
+
+Follow the create-new-mcp-tool workflow:
+1. Upload package.json, src/index.ts, and main implementation file
+2. Add/configure tsconfig.json
+3. Make implementation-specific updates
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: */package.json, */src/index.ts, */src/*.ts
+
+---
+id: mcp-oreilly-1-camel-case-files
+trigger: "When creating new TypeScript files"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Camel Case Files
+
+## Action
+
+Use camelCase naming convention for file names
+
+## Evidence
+
+- system-info-collector.ts uses kebab-case
+- index.ts files present in multiple locations
+
+---
+id: mcp-oreilly-1-pascal-case-classes
+trigger: "When defining class names"
+confidence: 0.6
+domain: code-style
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Pascal Case Classes
+
+## Action
+
+Use PascalCase naming convention for class names
+
+## Evidence
+
+- Inferred from TypeScript patterns in node/src structure
+
+---
+id: mcp-oreilly-1-relative-imports
+trigger: "When importing modules within the same package"
+confidence: 0.6
+domain: code-style
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Relative Imports
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- TypeScript project structure suggests local module organization
+
+---
+id: mcp-oreilly-1-named-exports
+trigger: "When exporting functionality from modules"
+confidence: 0.6
+domain: code-style
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Named Exports
+
+## Action
+
+Use named exports rather than default exports
+
+## Evidence
+
+- Multiple index.ts entry points suggest modular export pattern
+
+---
+id: mcp-oreilly-1-try-catch-errors
+trigger: "When handling potential errors in code"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Error handling style detected as try-catch from TypeScript analysis
+
+---
+id: mcp-oreilly-1-simple-commit-messages
+trigger: "When committing changes to repository"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Simple Commit Messages
+
+## Action
+
+Write simple, descriptive commit messages without prefixes
+
+## Evidence
+
+- Update system-info-collector.ts
+- Add files via upload
+- Rename node/tsconfig.json to node/sysinfo/tsconfig.json
+- Create README.md
+
+---
+id: mcp-oreilly-1-bulk-upload-then-organize
+trigger: "When adding multiple new files to project"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Bulk Upload Then Organize
+
+## Action
+
+Upload files first, then rename/move to proper directory structure
+
+## Evidence
+
+- Add files via upload
+- Rename node/tsconfig.json to node/weather/tsconfig.json
+- Rename node/src/index.ts to node/weather/src/index.ts
+
+---
+id: mcp-oreilly-1-language-directory-structure
+trigger: "When creating multi-language implementations"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Language Directory Structure
+
+## Action
+
+Organize code into language-specific directories (node/, python/, java/, etc.)
+
+## Evidence
+
+- Folders: node, python, java, postgreSQL
+- Rename patterns show consistent language-based organization
+
+---
+id: mcp-oreilly-1-iterative-documentation
+trigger: "When working on project documentation"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Iterative Documentation
+
+## Action
+
+Make multiple small commits to iteratively improve README content
+
+## Evidence
+
+- Multiple 'Update README.md' commits
+- Create README.md followed by updates
+- Documentation-iteration workflow frequency: 6
+
+---
+id: mcp-oreilly-1-typescript-config-per-tool
+trigger: "When creating new MCP tool implementation"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Typescript Config Per Tool
+
+## Action
+
+Add dedicated tsconfig.json and package.json for each tool
+
+## Evidence
+
+- node/sysinfo/tsconfig.json
+- node/weather/tsconfig.json
+- node/sysinfo/package.json
+- node/weather/package.json
+
+---
+id: mcp-oreilly-1-src-index-entry-point
+trigger: "When setting up new TypeScript module"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Src Index Entry Point
+
+## Action
+
+Create src/index.ts as the main entry point
+
+## Evidence
+
+- Rename node/src/index.ts to node/weather/src/index.ts
+- Multiple references to src/index.ts pattern
+
+---
+id: mcp-oreilly-1-separate-test-location
+trigger: "When adding tests to the project"
+confidence: 0.6
+domain: testing
+source: repo-analysis
+source_repo: pythontime/MCP-Oreilly-1
+---
+
+# Mcp Oreilly 1 Separate Test Location
+
+## Action
+
+Place tests in separate directory structure from source code
+
+## Evidence
+
+- Architecture analysis shows testLocation: 'separate'
+
